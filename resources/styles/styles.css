@@ -1,0 +1,27 @@
+.logo{
+    width: 100px;
+}
+
+nav,footer{
+    background-color: #E7D4B5;
+    min-height: 60px;
+}
+
+footer div img {
+    width: 40px;
+}
+
+.h-150px{
+    height: 150px;
+
+}
+.h-300px{
+    height: 300px;
+    width: 300px;
+
+}
+
+.filter-brigthness{
+    filter: brightness(0.5);
+}
+
