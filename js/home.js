@@ -1,10 +1,12 @@
 import { data } from "./data.js";
-import { createCard } from "./card.js";
+import { onUpdateCard } from "./card.js";
+import { getCategories } from './filters.js'
 
-console.log(data);
+
 
 // Obtener el contenedor de las cards
 const cardContainer = document.getElementById("cardContainer")
+
 
 cardContainer.innerHTML = ""
 
@@ -21,10 +23,9 @@ console.log(cardContainer)
 
 const events = data.events
 
-for(let event of events) {
-  const card = createCard(event.name, event.image, event.description, event.price, event._id)
-  cardContainer.appendChild(card)
-}
+getCategories(events)
+
+onUpdateCard(events)
 
 
 

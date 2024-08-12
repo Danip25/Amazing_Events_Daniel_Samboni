@@ -1,6 +1,8 @@
 import { data } from "./data.js";
-import { createCard } from "./card.js";
+import { onUpdateCard } from "./card.js";
 import { getTimeDate } from "./date.js";
+import { getCategories } from './filters.js'
+
 
 const cardContainer = document.getElementById('cardContainer')
 cardContainer.innerHTML = ""
@@ -22,9 +24,7 @@ for(let event of events) {
 }
 
 
-for(let pastEvent of pastEvents) {
-    const card = createCard(pastEvent.name, pastEvent.image, pastEvent.description, pastEvent.price, pastEvent._id)
-    cardContainer.appendChild(card)
-}
+getCategories(pastEvents)
 
+onUpdateCard(pastEvents)
 

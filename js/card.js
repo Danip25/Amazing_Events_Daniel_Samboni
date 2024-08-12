@@ -1,4 +1,7 @@
-export function createCard (name, image, desc, _price, id) {
+const cardContainer = document.getElementById("cardContainer")
+
+
+function createCard (name, image, desc, _price, id) {
 
     const card = document.createElement("div")
     // card.classList.add("card");
@@ -52,6 +55,17 @@ export function createCard (name, image, desc, _price, id) {
 
     card.appendChild(img)
     card.appendChild(cardBody)
-    console.log(card)
-    return card
+    cardContainer.appendChild(card)
 }
+
+export const onUpdateCard = (list) => {
+    cardContainer.innerHTML = ""
+    list.forEach(item => createCard(item.name, item.image, item.description, item.price, item._id) )
+    
+}
+
+// for(let event of events) {
+//     const card = createCard(event.name, event.image, event.description, event.price, event._id)
+//     cardContainer.appendChild(card)
+//   }
+  
