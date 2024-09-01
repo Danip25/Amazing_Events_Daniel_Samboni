@@ -1,9 +1,9 @@
-import { data } from "./data.js";
-import { onUpdateCard } from "./card.js";
-import { getTimeDate } from "./date.js";
-import { getCategories } from './filters.js'
+import { loadData } from "./modules/data.js";
+import { onUpdateCard } from "./modules/card.js";
+import { getTimeDate } from "./modules/date.js";
+import { getCategories } from './modules/filters.js'
 
-
+loadData().then(data =>{
 const cardContainer = document.getElementById('cardContainer')
 cardContainer.innerHTML = ""
 
@@ -27,3 +27,4 @@ for(let event of events) {
 getCategories(upcomingEvents)
 
 onUpdateCard(upcomingEvents)
+})

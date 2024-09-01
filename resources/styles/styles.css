@@ -21,6 +21,10 @@ footer div img {
 
 }
 
+.h-full {
+    height: 100%;
+}
+
 .filter-brigthness{
     filter: brightness(0.5);
 }
@@ -41,4 +45,35 @@ footer div img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.bg-color-smooth {
+    background-color: #ffefdd;
+}
+
+.card-body p{
+    font-size: .9rem;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.min-h-100 {
+    min-height: calc(100vh - 220px);
+}
+
+.text-2xl {
+    font-size: 2rem!important;
+}
+
+.text-xl {
+    font-size: 1.2rem!important;
+}
+
+.bg-white {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    flex: 1;
 }
